@@ -7,7 +7,7 @@ export default class PlayingToday extends ApiComponent {
     constructor(props) {
         super(props);
 
-        this.url = '/api/screenings/today';
+        this.url = 'api/theater/cinema-city-letnany';
 
         this.container_className = 'playing-today';
     }

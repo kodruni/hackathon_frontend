@@ -7,22 +7,21 @@ export default class Theater extends ApiComponent {
     constructor(props) {
         super(props);
 
-        this.url = '/api/theater';
+        this.url = '/api/theater' + props.location.pathname;
 
         this.container_className = 'theater';
     }
 
     buildQS() {
-        let { slug } = this.props.match.params;
+        // let { slug } = this.props.match.params;
 
-        return {
-            theater: slug
-        };
+        // return {
+        //     theater: slug
+        // };
+        return {}
     }
 
     getLoadedContent() {
-        let { slug } = this.props.match.params;
-
-        return <Content slug={ slug } data={ this.state.data } />
+        return <Content data={ this.state.data } />
     }
 }

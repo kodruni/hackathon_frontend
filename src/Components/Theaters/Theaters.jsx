@@ -5,25 +5,23 @@ import {
     Route,
     Link
 } from "react-router-dom";
-
+import Theater from "../Theater";
 export default function Theaters(props) {
+    console.log(props)
     return (
-
+      
         <>
             <h1>Welcome to Daydream Cinemas</h1>
 
             <div className="calltoaction">Please select a theater near you</div>
 
             <ul>
-                <li>
-                    <Link to="/prague">Prague</Link>
-                </li>
-                <li>
-                    <Link to="/london">London</Link>
-                </li>
-                <li>
-                    <Link to="/brussels">Brussels</Link>
-                </li>
+                {
+                 props.data.map((item) => {
+                        return <li><Link to={item.slug}>{item.name}</Link></li>
+                    })
+                }
+        
             </ul>
         </>
 

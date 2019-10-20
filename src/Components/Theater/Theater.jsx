@@ -5,6 +5,7 @@ import PlayingToday from '../PlayingToday';
 import UpcomingMovies from '../UpcomingMovies';
 
 export default function Theater(props) {
+    console.log(props.data)
     return (
         <>
             <Header 
@@ -18,7 +19,9 @@ export default function Theater(props) {
                 <main>
                     <PlayingToday />
 
+
                     <UpcomingMovies />
+
                 </main>
 
                 <aside>
